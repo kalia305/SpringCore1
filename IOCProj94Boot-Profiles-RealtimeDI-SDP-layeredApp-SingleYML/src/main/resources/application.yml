@@ -1,0 +1,40 @@
+spring: 
+   profiles: 
+     active: dev 
+
+---
+spring:
+  profiles: dev
+    
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 10
+    password: root
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql:///ntsp712db
+    username: root
+---
+
+spring: 
+    profiles: test
+   
+    datasource: 
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      password: root
+      type: com.mchange.v2.c3p0.ComboPooledDataSource
+      url: jdbc:mysql:///ntsp712db
+      username: root
+---
+  
+  spring:  
+    profiles: prod
+    
+    datasource: 
+     driver-class-name: org.postgresql.Driver
+     password: root
+     type: org.apache.commons.dbcp2.BasicDataSource
+     url: jdbc:postgresql:///ntsp712db
+     username: postgres
+     
