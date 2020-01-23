@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  default-lazy-init="true" xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+   <!-- Dependent Beans cfg -->
+   <bean id="dEngine"  class="com.nt.beans.DieselEngine" />
+   <bean id="pEngine"  class="com.nt.beans.PetrolEngine"/>
+   <bean id="wEngine"  class="com.nt.beans.WaterEngine"/>
+   
+   <!-- Target Bean class cfg -->
+   <bean id="vehicle"  class="com.nt.beans.Vehicle">
+       <constructor-arg >
+           <idref bean="dEngine"/>
+       </constructor-arg>
+   </bean>
+
+</beans>
