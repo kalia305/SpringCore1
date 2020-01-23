@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+ <bean id="pInfo"  class="com.nt.beans.PersonalInfo">
+   <property name="name"  value="rajesh"/>
+   <property name="ano" value="3456767887767"/>
+   <property name="dob" value="11/10/1990"/>
+   <property name="age" value="30.33f"/>
+   <property name="favoriteJavaClass"   value="java.lang.System"/>
+   <property name="gender" value="M"/>
+   <property name="photoPath" value="c:/photos/rajesh.jpg"/>
+    <property name="currencySymbol"  value="USD"/>
+   <property name="currentLocale" value="hi-IN"/>
+   <property name="fbProfileUrl" value="https://facebook.com/profile?id=raja123"/>
+   <property name="verifiers" value="rahul, modi"/>
+   <property name="luckyNumbers" value="ABCD"/>
+   <property name="timezone" value="America/Los_Angeles"/>
+ 
+ </bean>	
+	
+
+
+</beans>
