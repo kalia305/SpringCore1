@@ -1,0 +1,10 @@
+spring: 
+   datasource:
+          #type: org.apache.commons.dbcp2.BasicDataSource 
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql:///ntsp712db
+          username: root
+          password: root
+          
+          
+          

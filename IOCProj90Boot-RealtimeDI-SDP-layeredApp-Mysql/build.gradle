@@ -1,0 +1,47 @@
+plugins {
+	id 'org.springframework.boot' version '1.5.6.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'java'
+}
+
+group = 'nit'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile ('org.springframework.boot:spring-boot-starter-jdbc'){
+	         exclude group: 'org.apache.tomcat', module: 'tomcat-jdbc'
+	}
+
+	runtimeOnly 'com.oracle.ojdbc:ojdbc8'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+	// https://mvnrepository.com/artifact/org.projectlombok/lombok
+ compile group: 'org.projectlombok', name: 'lombok', version: '1.18.10'
+ 
+ // https://mvnrepository.com/artifact/com.mchange/c3p0
+compile group: 'com.mchange', name: 'c3p0', version: '0.9.5.5'
+ 
+ 
+ // https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2
+//compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.7.0'
+
+// https://mvnrepository.com/artifact/mysql/mysql-connector-java
+compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.18'
+
+ // https://mvnrepository.com/artifact/com.zaxxer/HikariCP
+//compile group: 'com.zaxxer', name: 'HikariCP', version: '3.4.1'
+ 
+	// https://mvnrepository.com/artifact/commons-dbcp/commons-dbcp
+//compile group: 'commons-dbcp', name: 'commons-dbcp', version: '1.4'
+	
+}
+
+test {
+	useJUnitPlatform()
+}
