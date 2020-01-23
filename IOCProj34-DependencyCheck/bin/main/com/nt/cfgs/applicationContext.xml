@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-dependency-check="all" xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+  
+  <bean id="crs"  class="com.nt.beans.Course" dependency-check="none">
+      <property name="name"  value="spring"/>
+      <!-- <property name="duration" value="130"/> -->
+  </bean>
+
+  <bean  id="st"  class="com.nt.beans.Student"  dependency-check="default">
+      <property name="id"  value="40001"/>
+      <property name="name" value="raja"/>
+      <property name="course"  ref="crs"/>
+  </bean>
+
+</beans>
