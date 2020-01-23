@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+   <bean id="pInfo"  class="com.nt.beans.PersonalInfo">
+       <!-- <constructor-arg value="999888888"/> -->
+       <constructor-arg value="000"/>
+       <constructor-arg value="raja"/>
+       <constructor-arg ><null/></constructor-arg>
+       <constructor-arg>
+             <bean class="java.util.Date">
+                <property name="year"  value="110"/>
+                <property name="month" value="10"/>
+                <property name="date"  value="21"/>
+             </bean>
+       </constructor-arg>
+   </bean>
+
+</beans>
